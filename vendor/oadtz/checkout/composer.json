@@ -1,0 +1,40 @@
+{
+  "name": "oadtz/checkout",
+  "description": "This is for testing propose only",
+  "license": "MIT",
+  "keywords": [
+    "Oadtz",
+    "Checkout"
+  ],
+  "authors": [
+    {
+      "name": "Thanapat Pirmphol",
+      "email": "t.pirmphol@gmail.com",
+      "homepage": "https://www.oadtz.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "adyen/php-api-library": "^1.5",
+    "braintree/braintree_php": "^3.36"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.4",
+    "mockery/mockery": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Oadtz\\Checkout\\": "src",
+      "Oadtz\\Library\\": "src/library"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Oadtz\\Checkout\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "stable"
+}

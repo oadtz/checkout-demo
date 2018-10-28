@@ -100,6 +100,7 @@
                     dataType: 'json',
                     success: function (response) {
 						showAlert ('Success', 'alert-success');
+						$('#checkout').trigger('reset');
                     },
                     error: function (error) {
 						showAlert (error.responseJSON.error || 'Error occured', 'alert-danger');
