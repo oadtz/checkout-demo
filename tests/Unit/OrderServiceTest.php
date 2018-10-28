@@ -30,7 +30,7 @@ class OrderServiceTest extends TestCase
         ]);
         $orderRepo = Mockery::mock('App\Repositories\Interfaces\OrderRepositoryInterface');
         $orderRepo->shouldReceive([
-            'store'     =>  new \App\Order()
+            'store'     =>  new \App\Order([ 'status' => 'SUCCESS' ])
         ]);
         $this->order = new OrderService($checkout, $orderRepo);
 

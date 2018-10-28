@@ -18,11 +18,19 @@ services:
       - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     networks:
       - mynetwork
+  
+  composer:
+    build: ./docker/php
+    volumes:
+      - .:/var/www/
+      - .env.example:/var/www/.env
+    command: bash -c "cd /var/www && composer install"
 
   php:
     build: ./docker/php
     volumes:
       - .:/var/www/
+      - .env.example:/var/www/.env
     networks:
       - mynetwork
   

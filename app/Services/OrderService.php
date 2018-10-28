@@ -92,11 +92,26 @@ class OrderService implements OrderServiceInterface {
         try {
             $result = $this->checkout->processPayment();
 
-            return $this->order->store(array_merge($this->paymentData, [
+
+            $order = $this->order->store(array_merge($this->paymentData, [
                 'status'            =>  $result->getSuccess() ? 'SUCCESS' : 'FAILED',
                 'payment_gateway'   =>  $result->getPaymentGateway(),
                 'response_data'     =>  json_encode($result->getResponseData())
             ]));
+
+            if ($order->status == 'FAILED') {
+                $responseData = (array)json_decode($order->response_data);
+                $errorMessage = 'Payment failed';
+
+                if (isset($responseData['refusalReason']))
+                    $errorMessage = $responseData['refusalReason'];
+                else if (isset($responseData['message']))
+                    $errorMessage = $responseData['message'];
+                    
+                throw new \Exception ($errorMessage);
+            }
+
+            return $order;
         } catch (\Exception $e) {
             throw $e;
         }

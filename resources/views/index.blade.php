@@ -99,18 +99,7 @@
                     data: $(this).serialize(),
                     dataType: 'json',
                     success: function (response) {
-						if (response.status == 'SUCCESS') {
-							showAlert ('Success', 'alert-success');
-						} else {
-							var responseData = JSON.parse(response.response_data);
-
-							if (responseData.refusalReason)
-								showAlert (responseData.refusalReason, 'alert-danger');
-							else if (responseData.message)
-								showAlert (responseData.message, 'alert-danger');
-							else
-								showAlert ('Payment failed', 'alert-danger');
-						}
+						showAlert ('Success', 'alert-success');
                     },
                     error: function (error) {
 						showAlert (error.responseJSON.error || 'Error occured', 'alert-danger');
