@@ -47,7 +47,7 @@ BRAINTREE_PRIVATE_KEY=
 
   
 
-$ docker-compose up -d
+$ docker-compose up
 
   
 
