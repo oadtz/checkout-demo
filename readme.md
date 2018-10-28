@@ -7,7 +7,7 @@
 
 A laravel project to implement oadtz/checkout package
 
-https://www.githib.com/oadtz/checkout
+https://www.github.com/oadtz/checkout
 
   
 
