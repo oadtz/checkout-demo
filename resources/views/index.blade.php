@@ -72,10 +72,10 @@
 					<hr>
 					<div class="form-group row">
 						<div class="col-md-6">
-							<button type="reset" class="btn btn-default btn-lg btn-block">Reset</button>
+							<button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
 						</div>
 						<div class="col-md-6">
-							<button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+							<button type="reset" class="btn btn-default btn-lg btn-block">Reset</button>
 						</div>
 					</div>
 				</form>
