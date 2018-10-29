@@ -127,4 +127,4 @@ To get into MySQL server docker, run this command:
 
   
 
-    $ docker-compose exec php bash -c 'cd /var/www && vendor/bin/phpunit'
+    $ docker-compose exec php bash -c 'cd /var/www/html && vendor/bin/phpunit'
