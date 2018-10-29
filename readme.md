@@ -1,13 +1,21 @@
 
   
 
+  
+
 # Demo for oadtz/checkout package
+
+  
 
   
 
 A laravel project to implement oadtz/checkout package
 
+  
+
 https://www.github.com/oadtz/checkout
+
+  
 
   
 
@@ -15,27 +23,49 @@ https://www.github.com/oadtz/checkout
 
   
 
+  
+
 (Optional) Open up *.env* file in project's root, then edit the following variables to match with your Adyen & Braintree accounts
 
   
 
-ADYEN_USERNAME=
+  
 
-ADYEN_PASSWORD=
+    ADYEN_USERNAME=
+    
+      
+    
+    ADYEN_PASSWORD=
+    
+      
+    
+    ADYEN_ENVIRONMENT=test
+    
+      
+    
+    ADYEN_APPNAME=
+    
+      
+    
+    ADYEN_MERCHANT_ACCOUNT=
+    
+      
+    
+    BRAINTREE_ENVIRONMENT=sandbox
+    
+      
+    
+    BRAINTREE_MERCHANT_ID=
+    
+      
+    
+    BRAINTREE_PUBLIC_KEY=
+    
+      
+    
+    BRAINTREE_PRIVATE_KEY=
 
-ADYEN_ENVIRONMENT=test
-
-ADYEN_APPNAME=
-
-ADYEN_MERCHANT_ACCOUNT=
-
-BRAINTREE_ENVIRONMENT=sandbox
-
-BRAINTREE_MERCHANT_ID=
-
-BRAINTREE_PUBLIC_KEY=
-
-BRAINTREE_PRIVATE_KEY=
+  
 
   
 
@@ -47,7 +77,11 @@ BRAINTREE_PRIVATE_KEY=
 
   
 
-$ docker-compose up
+  
+
+    $ docker-compose up
+
+  
 
   
 
@@ -59,13 +93,21 @@ Navigate browser to:
 
   
 
+  
+
 http://localhost:8080
+
+  
 
   
 
 ## Database
 
+  
+
 To get into MySQL server docker, run this command:
+
+  
 
   
 
@@ -74,6 +116,7 @@ To get into MySQL server docker, run this command:
   
 
   
+
   
 
 ## Unit test and integration test
@@ -82,4 +125,6 @@ To get into MySQL server docker, run this command:
 
   
 
-$ docker-compose exec php bash -c 'cd /var/www && vendor/bin/phpunit'
+  
+
+    $ docker-compose exec php bash -c 'cd /var/www && vendor/bin/phpunit'
